@@ -8,14 +8,9 @@ added: v6.1.0
     * `user` {integer}
     * `system` {integer}
 
-The `process.cpuUsage()` method returns the user and system CPU time usage of
-the current process, in an object with properties `user` and `system`, whose
-values are microsecond values (millionth of a second). These values measure time
-spent in user and system code respectively, and may end up being greater than
-actual elapsed time if multiple CPU cores are performing work for this process.
+process.cpuUsage（）方法返回当前进程的用户和系统CPU时间使用情况，该对象具有属性user和system，其值为微秒值（百万分之一秒）。这些值分别测量在用户和系统代码中花费的时间，如果多个CPU内核正在执行此过程，则可能会最终超过实际耗用的时间。
 
-The result of a previous call to `process.cpuUsage()` can be passed as the
-argument to the function, to get a diff reading.
+以前调用process.cpuUsage（）的结果可以作为参数传递给函数，以获取diff读取。
 
 ```js
 const startUsage = process.cpuUsage();
